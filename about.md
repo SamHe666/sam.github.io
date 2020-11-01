@@ -7,4 +7,3 @@ permalink: /about/
 Hi，我是 Sam.
 
 
-
