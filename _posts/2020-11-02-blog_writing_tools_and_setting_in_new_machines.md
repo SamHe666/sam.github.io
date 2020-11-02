@@ -7,6 +7,16 @@ toc: true
 author: Sam
 ---
 
+### 下载Github客户端
+
+Github下载地址：https://desktop.github.com/
+
+1. 登录Github账号：QQ邮箱
+2. Clone Repository到本地：samhe666.github.io
+3. 博客文章用用markdown语法，写好统一放在_post文件夹下上传。
+
+
+
 ### 下载Typora和Picgo
 
 Typora下载地址：https://typora.io/
