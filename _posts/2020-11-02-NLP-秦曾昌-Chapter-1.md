@@ -1,0 +1,63 @@
+---
+layout: post
+title: "NLP-秦曾昌 Chapter 1"
+date:   2020-11-02
+tags: [NLP]
+toc: true
+author: Sam
+---
+
+
+
+### Background
+
+自然语言理解是人工智能的重要标准之一。目前NLP的主流研究是基于Machine Learning的方法。
+
+
+
+##### 推荐书籍：
+
+- Pattern Recognition and Machine Learning
+
+- Foundations of Statistical Natural Language Processing (NLP 经典1)
+
+- Speech and Language Processing (NLP 经典2）
+
+- Deep Learning
+
+  
+
+##### 中英文术语对照：
+
+| English                | 中文                                                         |
+| ---------------------- | ------------------------------------------------------------ |
+| Words Segmentation     | 分词，标准形式的英文文本其实不需要分词，利用其本身的词与词的间隔就可以了。 |
+| Part-of-Speech Tagging | 词性标注                                                     |
+| Morphology             | 词的不同形态（第一人称和第三人称的变化）                     |
+| Syntax                 | 句法                                                         |
+| Syntax Analysis        | 句法分析，通过树桩结构去解析                                 |
+| Semantics              | 语义，语言含义                                               |
+
+
+
+##### Ambiguity
+
+Ambiguity有很多层次：
+
+- 词意 (Word Sense)：比如说apple（电子产品or水果）
+- 词性 (Part of Speech)：host（名词还是形容词）
+- 句法结构 (Syntactic Structure)：I saw a man with a telescope（who has the telescope?）
+- 引用 (Reference): John dropped the goblet onto the glass table and it broke (what does it refer to?)
+
+Possible Solution for Ambiguity: 通过概率模型对不清晰的东西进行建模，通过上下文or背景知识来推断。
+
+
+
+##### Variance and Expressivity
+
+这里说的是语言有很多种表达方式去表达同样的意思，这让NLP变得非常challenging。
+
+
+
+
+
