@@ -9,7 +9,7 @@ author: Sam
 
 
 
-### Background
+## Background
 
 自然语言理解是人工智能的重要标准之一。目前NLP的主流研究是基于Machine Learning的方法。
 
