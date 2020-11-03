@@ -35,9 +35,9 @@ author: Sam
 
 
 以下是两个常用的向量范式
-+ $\ell_1$ is Manhattan Distance: $$ \lVert x \rVert_1 = \sum_{i=1}^{n} \left| x_i \right| $$
++ $\ell_1$ is Manhattan Distance: $ \lVert x \rVert_1 = \sum_{i=1}^{n} \left| x_i \right| $
 
-+ $\ell_2$ is Euclidean Distance: $$ \lVert x \rVert_2 = \sqrt{\sum_{i=1}^{n} x_{i}^{2}}$$
++ $\ell_2$ is Euclidean Distance: $ \lVert x \rVert_2 = \sqrt{\sum_{i=1}^{n} x_{i}^{2}}$
 
 + 推广到general distance：$\|\mathbf{x}\|_{p}=\left(\sum_{i=1}^{n}\left|x_{i}\right|^{p}\right)^{\frac{1}{p}} \quad(p \geq 1)$
 
