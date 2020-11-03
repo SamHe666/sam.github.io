@@ -11,7 +11,7 @@ author: Sam
 
 ## Mathematical Foundation
 
-### 1. Functions 1111
+### 1. Functions
 
 + 指数函数 $y=e^{x}$
 + 对数函数 $y=log_{e}(x)$, 它和指数函数互为反函数
@@ -28,7 +28,7 @@ author: Sam
 
 向量范式用来表示向量的长度，它可以通过向量的内积来定义，在不同定义的向量内积下，向量的长度也会不同，不管其如何定义的，总满足以下几个性质：
 + $\lVert x \rVert \geq 0$, with equality if and only if x = 0 (0向量)
-+ $\|\alpha x\|=|\alpha|\|x\|$
++ $\|\alpha x\|=|\alpha|\|x\|$, test
 + $\lVert x + y \rVert \leq \lVert x \rVert + \lVert y \rVert$ (the traiangle inequality)
 
 
@@ -54,7 +54,9 @@ author: Sam
 
 为了更好的理解，我们先回顾一下向量的点积（dot product）:
 $$
+ 
 x\top y = \sum_{i=1}^{n}  x_i y_i = \lVert x \rVert \lVert y \rVert cos\alpha
+ 
 $$
 其中，$\alpha$是向量$x$,$y$的角度。
 
