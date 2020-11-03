@@ -28,7 +28,7 @@ author: Sam
 
 向量范式用来表示向量的长度，它可以通过向量的内积来定义，在不同定义的向量内积下，向量的长度也会不同，不管其如何定义的，总满足以下几个性质：
 + $\lVert x \rVert \geq 0$, with equality if and only if x = 0 (0向量)
-+ $\lVert \alpha x \rVert= \left| \alpha \right| \lVert x \rVert$
++ $\|\alpha x\|=|\alpha|\|x\|$
 + $\lVert x + y \rVert \leq \lVert x \rVert + \lVert y \rVert$ (the traiangle inequality)
 
 
@@ -226,7 +226,8 @@ $$
 
 A function is convex if 
 $$
-f(t \mathbf{x}+(1-t) \mathbf{y}) \leq t f(\mathbf{x})+(1-t) f(\mathbf{y})
+
+f(t \mathbf{x}+(1-t) \mathbf{y}) \leq t f(\mathbf{x})+(1-t) f(\mathbf{y})
 $$
 for all $\mathbf{x}, \mathbf{y} \in \operatorname{dom} f$ and all $t \in[0,1]$。
 
@@ -236,7 +237,8 @@ for all $\mathbf{x}, \mathbf{y} \in \operatorname{dom} f$ and all $t \in[0,1]$�
 
 如果$f$是凸函数，那么有
 $$
-f(\frac{x+y}{2}) \leq \frac{f(x)+f(y)}{2}
+
+f(\frac{x+y}{2}) \leq \frac{f(x)+f(y)}{2}
 $$
 这是Jensen不等式的常规形式，还可以扩展为：如果$x_1, x_2, ..., x_k \in dom(f)$，$\theta_1, \theta_2, ..., \theta_k \geq 0$ 而且 $\theta_1 + \theta_2 + ... + \theta_k = 1$，则下式成立。
 
