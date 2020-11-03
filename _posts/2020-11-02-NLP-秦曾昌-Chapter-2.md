@@ -5,13 +5,26 @@ date:   2020-11-02
 tags: [NLP]
 toc: true
 author: Sam
+
 ---
+
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
 
 
 
 ## Mathematical Foundation
 
-### 1. Functions
+### 1. Functions -
 
 + 指数函数 $y=e^{x}$
 + 对数函数 $y=log_{e}(x)$, 它和指数函数互为反函数
