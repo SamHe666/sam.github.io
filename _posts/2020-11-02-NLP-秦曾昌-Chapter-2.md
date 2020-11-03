@@ -11,7 +11,7 @@ author: Sam
 
 ## Mathematical Foundation
 
-### 1. Functions - 
+### 1. Functions
 
 + 指数函数 $y=e^{x}$
 + 对数函数 $y=log_{e}(x)$, 它和指数函数互为反函数
