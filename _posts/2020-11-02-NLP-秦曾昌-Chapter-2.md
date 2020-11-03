@@ -5,14 +5,13 @@ date:   2020-11-02
 tags: [NLP]
 toc: true
 author: Sam
-
 ---
 
 
 
 ## Mathematical Foundation
 
-### 1. Functions
+### 1. Functions - 
 
 + 指数函数 $y=e^{x}$
 + 对数函数 $y=log_{e}(x)$, 它和指数函数互为反函数
@@ -39,7 +38,7 @@ author: Sam
 
 + $\ell_2$ is Euclidean Distance: $ \lVert x \rVert_2 = \sqrt{\sum_{i=1}^{n} x_{i}^{2}}$
 
-+ 推广到general distance：$\|\mathbf{x}\|_{p}=\left(\sum_{i=1}^{n}\left|x_{i}\right|^{p}\right)^{\frac{1}{p}} \quad(p \geq 1)$
++ 推广到general distance：$\lVert \mathbf{x} \rVert_{p}=\left(\sum_{i=1}^{n}\left|x_{i}\right|^{p}\right)^{\frac{1}{p}} \quad(p \geq 1)$
 
 + 不同norm的等高线如下图所示：
 
