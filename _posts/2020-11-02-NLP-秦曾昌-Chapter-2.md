@@ -11,7 +11,11 @@ author: Sam
 
 ## Mathematical Foundation
 
-### 1. Functions 6
+**Notes**： Jekyll 对Latex公式渲染的效果一般，这个笔记可能会存在公式渲染错误的情况。最好的阅读方式clone整个blog到本地，然后用Typora打开_post文件夹下的md源文件来阅读。
+
+
+
+### 1. Functions
 
 + 指数函数 $y=e^{x}$
 + 对数函数 $y=log_{e}(x)$, 它和指数函数互为反函数
@@ -31,11 +35,11 @@ author: Sam
 + $\begin{equation}
   \|\alpha x\|=|\alpha|\|x\|
   \end{equation}$
-+ $\lVert x + y \rVert \leq \lVert x \rVert + \lVert y \rVert$ (the traiangle inequality)
++ $\lVert x + y \rVert \leq \lVert x \rVert + \lVert y \rVert$ (the triangle inequality)
 
 
 
-以下是两个常用的向量范式
+以下是两个常用的向量范式：
 + $\ell_1$ is Manhattan Distance: $\begin{equation}
   \| x \|_{1} = \sum_{i=1}^{n} \left| x_{i} \right|
   \end{equation}$
@@ -69,7 +73,7 @@ $$
 
 + 性质2 positive definite, $\forall x \in V \backslash \{ 0 \}: \beta(x, x) > 0$
 
-+ 性质3 blinear: 
++ 性质3 bilinear: 
   $$
   \beta(\lambda x + y, z) = \lambda \beta(x, z) + \beta(y, z)
   $$
@@ -96,7 +100,7 @@ $$
 $d(x, y)$被称为metric, 满足以下3个性质。
 
 + positive definite $d(x, y) > 0$，当且仅当 $x = y$ 时，$d(x, y) = 0$
-+ symetric $d(x, y) = d(y, x)$
++ symmetric $d(x, y) = d(y, x)$
 + triangular inequality $d(x, z) \leq d(x, y) + d(y, z)$
 
 
