@@ -37,12 +37,12 @@ author: Sam
 
 以下是两个常用的向量范式
 + $\ell_1$ is Manhattan Distance: $\begin{equation}
-  \|x\|_{1}=\sum_{i=1}^{n} \left|x_{i}\right|
+  \| x \|_{1} = \sum_{i=1}^{n} \left| x_{i} \right|
   \end{equation}$
 
 + $\ell_2$ is Euclidean Distance: $ \lVert x \rVert_2 = \sqrt{\sum_{i=1}^{n} x_{i}^{2}}$
 
-+ 推广到general distance：$ \begin{equation} \lVert \mathbf{x} \rVert_{p}=\left(\sum_{i=1}^{n} \left|x_{i}\right|^{p}\right)^{\frac{1}{p}} \quad(p \geq 1) \end{equation}$
++ 推广到general distance：$ \begin{equation} \lVert \mathbf{x} \rVert_{p} = \left( \sum_{i=1}^{n} \left| x_{i} \right|^{p} \right)^{\frac{1}{p}} \quad(p \geq 1) \end{equation}$
 
 + 不同norm的等高线如下图所示：
 
@@ -58,11 +58,7 @@ author: Sam
 
 为了更好的理解，我们先回顾一下向量的点积（dot product）:
 $$
-\begin{equation}
-\\
 x\top y = \sum_{i=1}^{n}  x_i y_i = \lVert x \rVert \lVert y \rVert cos\alpha
-\\
-\end{equation}
 $$
 其中，$\alpha$是向量$x$,$y$的角度。
 
@@ -70,10 +66,17 @@ $$
 
 向量的点积其实是一种特殊的向量的内积。严格来说，向量的内积是一个很general的概念。假设$V$是向量空间，那么任何一个映射函数$\beta$，把$V \times V$映射到一个实数$R$, 而且$\beta$满足以下性质，我们就把$\beta$称之为向量的一个内积。
 + 性质1 symmetric, $\beta(x, y) = \beta(y, x)$
+
 + 性质2 positive definite, $\forall x \in V \backslash \{ 0 \}: \beta(x, x) > 0$
+
 + 性质3 blinear: 
-$$\beta(\lambda x + y, z) = \lambda \beta(x, z) + \beta(y, z)$$
-$$\beta(x, \lambda y + z) = \lambda \beta(x, y) + \beta(x, z)$$
+  $$
+  \beta(\lambda x + y, z) = \lambda \beta(x, z) + \beta(y, z)
+  $$
+  and 
+  $$
+  \beta(x, \lambda y + z) = \lambda \beta(x, y) + \beta(x, z)
+  $$
 
 Inner Product 一般用$\langle x, y \rangle$来表示。它满足Cauchy-Schwarz不等式：
 
