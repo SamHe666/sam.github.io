@@ -28,13 +28,15 @@ author: Sam
 
 向量范式用来表示向量的长度，它可以通过向量的内积来定义，在不同定义的向量内积下，向量的长度也会不同，不管其如何定义的，总满足以下几个性质：
 + $\lVert x \rVert \geq 0$, with equality if and only if x = 0 (0向量)
-+ $\|\alpha x\|=|\alpha|\|x\|$, test
++ $\lVert \alpha x \rVert=| \alpha | \lVert x \rVert$
 + $\lVert x + y \rVert \leq \lVert x \rVert + \lVert y \rVert$ (the traiangle inequality)
 
 
 
 以下是两个常用的向量范式
-+ $\ell_1$ is Manhattan Distance: $ \lVert x \rVert_1 = \sum_{i=1}^{n} \left| x_i \right| $
++ $\ell_1$ is Manhattan Distance: $ \begin{equation}
+  \|x\|_{1}=\sum_{i=1}^{n}\left|x_{i}\right|
+  \end{equation} $
 
 + $\ell_2$ is Euclidean Distance: $ \lVert x \rVert_2 = \sqrt{\sum_{i=1}^{n} x_{i}^{2}}$
 
@@ -54,9 +56,7 @@ author: Sam
 
 为了更好的理解，我们先回顾一下向量的点积（dot product）:
 $$
- 
 x\top y = \sum_{i=1}^{n}  x_i y_i = \lVert x \rVert \lVert y \rVert cos\alpha
- 
 $$
 其中，$\alpha$是向量$x$,$y$的角度。
 
@@ -228,8 +228,7 @@ $$
 
 A function is convex if 
 $$
-
-f(t \mathbf{x}+(1-t) \mathbf{y}) \leq t f(\mathbf{x})+(1-t) f(\mathbf{y})
+f(t \mathbf{x}+(1-t) \mathbf{y}) \leq t f(\mathbf{x})+(1-t) f(\mathbf{y})
 $$
 for all $\mathbf{x}, \mathbf{y} \in \operatorname{dom} f$ and all $t \in[0,1]$。
 
@@ -239,8 +238,7 @@ for all $\mathbf{x}, \mathbf{y} \in \operatorname{dom} f$ and all $t \in[0,1]$�
 
 如果$f$是凸函数，那么有
 $$
-
-f(\frac{x+y}{2}) \leq \frac{f(x)+f(y)}{2}
+f(\frac{x+y}{2}) \leq \frac{f(x)+f(y)}{2}
 $$
 这是Jensen不等式的常规形式，还可以扩展为：如果$x_1, x_2, ..., x_k \in dom(f)$，$\theta_1, \theta_2, ..., \theta_k \geq 0$ 而且 $\theta_1 + \theta_2 + ... + \theta_k = 1$，则下式成立。
 
