@@ -11,7 +11,7 @@ author: Sam
 
 ## Mathematical Foundation
 
-### 1. Functions
+### 1. Functions 3
 
 + 指数函数 $y=e^{x}$
 + 对数函数 $y=log_{e}(x)$, 它和指数函数互为反函数
@@ -36,7 +36,9 @@ author: Sam
 
 
 以下是两个常用的向量范式
-+ $\ell_1$ is Manhattan Distance: $ \begin{equation} \|x\|_{1}=\sum_{i=1}^{n}\left|x_{i}\right| \end{equation}$
++ $\ell_1$ is Manhattan Distance: $\begin{equation}
+  \|x\|_{1}=\sum_{i=1}^{n}\left|x_{i}\right|
+  \end{equation}$
 
 + $\ell_2$ is Euclidean Distance: $ \lVert x \rVert_2 = \sqrt{\sum_{i=1}^{n} x_{i}^{2}}$
 
@@ -56,9 +58,9 @@ author: Sam
 
 为了更好的理解，我们先回顾一下向量的点积（dot product）:
 $$
-\begin{equation}
+\\
 x\top y = \sum_{i=1}^{n}  x_i y_i = \lVert x \rVert \lVert y \rVert cos\alpha
-\end{equation}
+\\
 $$
 其中，$\alpha$是向量$x$,$y$的角度。
 
