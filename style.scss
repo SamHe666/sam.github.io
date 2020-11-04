@@ -15,13 +15,6 @@
 /* BASE RULES */
 /**************/
 
-img {
-  /* 图片居中 */
-  clear: both;
-  margin: 0 auto;
-  display: block;
-}
-
 html {
   font-size: $base-font-size;
 }
@@ -276,7 +269,8 @@ a.footnote {
 img {
   display: block;
   max-width: 100%;
-  margin: 0 0 1em;
+  // margin: 0 0 1em; 为了图片居中注释掉
+  margin: 0 auto;
   border-radius: 5px;
 }
 
