@@ -132,7 +132,7 @@ $$
 
 
 
-**例子**
+**例子** 
 
 情感分析，logistic regression
 
