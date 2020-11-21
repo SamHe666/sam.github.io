@@ -9,9 +9,9 @@ author: Sam
 
 ## Word Representation
 
-### 1. Naïve representation: 
+### 1. Naïve representation (One-hot): 
 
-用one-hot向量来表示，这个向量的维度是 $R^{|V|}$。
+用one-hot向量来表示，这个向量的维度是 $R^{|V|}$。也就是词袋模型。
 
 缺点：
 
@@ -141,7 +141,7 @@ Embedding Learning说白了就是要学习词的向量表达：embedding matrix�
    $$
    L(\theta)=\frac{1}{T} \sum_{t} \log f\left(w_{t}, w_{t-1}, \ldots, w_{t-n+1}\right)+R(\theta)
    $$
-   其中，模型的参数 $\theta$ 包括了Embedding层矩阵$C$的元素，和前向反馈神经网络模型$g$里的权重。这是一个巨大的参数空间。不过，在用SGD学习更新模型的参数时，**并不是所有的参数都需要调整（例如未在输入的context中出现的词对应的词向量）**。**计算的瓶颈主要是在softmax层的归一化函数上**（需要对词典中所有的word计算一遍条件概率）。
+   其中，模型的参数 $\theta$ 包括了Embedding层矩阵$C$的元素，和前向反馈神经网络模型$g$里的权重。这是一个巨大的参数空间。不过，在用SGD学习更新模型的参数时，**并不是所有的参数都需要调整（例如未在输入的context中出现的词对应的词向量）**。**计算的瓶颈主要是在softmax层的归一化函数上（需要对词典中所有的word计算一遍条件概率）**。
 
    
 
@@ -192,9 +192,9 @@ CBoW 对NNLM模型做了如下改造和简化（注意网上的这张图的notat
 
    <img src="https://i.loli.net/2020/11/19/U4CW2qctjOln3Ma.png" alt="@skip-gram的训练样本" style="zoom:50%;" />
 
-2. 假设训练集为：一个单词序列 $w_1, ..., w_T$， 其中的每个词 $w_t \in V$，$V$ 表示一个有限的大词汇表。那么Skip-gram Model输出层的维度是 $|V|$。
+2. 假设训练集为：一个单词序列 $w_1, ..., w_T$， 其中的每个词 $w_t \in V$，$V$ 表示一个有限的大词汇表。那么Skip-gram Model输出层的维度是 $V \times V$。
 
-3. 注意注意注意，目标函数不是最小化交叉熵了，而是最大化联合概率：
+3. 注意注意注意，目标函数不是最小化交叉熵了，而是最大化log联合概率：
    $$
    \frac{1}{T} \sum_{t=1}^{T} \sum_{-c \leq j \leq c, j \neq 0} \log p\left(w_{t+j} \mid w_{t}\right)
    $$
@@ -204,7 +204,7 @@ CBoW 对NNLM模型做了如下改造和简化（注意网上的这张图的notat
 
 #### 4.3. Word2Vec的优化（重要节点 - 3）
 
-然而，直接对词典里的V个词计算相似度并归一化，显然是一件极其耗时的impossible mission。为此，Mikolov引入了两种优化算法：**层次Softmax（Hierarchical Softmax）**和**负采样（Negative Sampling）**。 
+然而，直接对词典里的V个词计算相似度并归一化，显然是一件极其耗时的impossible mission。为此，Mikolov引入了两种优化算法：**Hierarchical Softmax 和 Negative Sampling**。 （待补充）
 
 
 
