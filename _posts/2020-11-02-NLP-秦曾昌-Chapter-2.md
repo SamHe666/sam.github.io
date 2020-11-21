@@ -33,7 +33,7 @@ author: Sam
 向量范式用来表示向量的长度，它可以通过向量的内积来定义，在不同定义的向量内积下，向量的长度也会不同，不管其如何定义的，总满足以下几个性质：
 + $\lVert x \rVert \geq 0$, with equality if and only if x = 0 (0向量)
 + $\begin{equation}
-  \|\alpha x\|=|\alpha|\|x\|
+  \lVert\alpha x \rVert=\mid \alpha \mid \lVert x \rVert
   \end{equation}$
 + $\lVert x + y \rVert \leq \lVert x \rVert + \lVert y \rVert$ (the triangle inequality)
 
@@ -41,12 +41,12 @@ author: Sam
 
 以下是两个常用的向量范式：
 + $\ell_1$ is Manhattan Distance: $\begin{equation}
-  \| x \|_{1} = \sum_{i=1}^{n} \left| x_{i} \right|
+  \lVert x \rVert_{1} = \sum_{i=1}^{n} \mid x_{i} \mid
   \end{equation}$
 
 + $\ell_2$ is Euclidean Distance: $ \lVert x \rVert_2 = \sqrt{\sum_{i=1}^{n} x_{i}^{2}}$
 
-+ 推广到general distance：$ \begin{equation} \lVert \mathbf{x} \rVert_{p} = \left( \sum_{i=1}^{n} \left| x_{i} \right|^{p} \right)^{\frac{1}{p}} \quad(p \geq 1) \end{equation}$
++ 推广到general distance：$ \begin{equation} \lVert \mathbf{x} \rVert_{p} = \left( \sum_{i=1}^{n} \mid x_{i} \mid^{p} \right)^{\frac{1}{p}} \quad(p \geq 1) \end{equation}$
 
 + 不同norm的等高线如下图所示：
 
@@ -425,6 +425,7 @@ $$
 
 
 7. Gaussian Distribution; 二项式分布的极限就是正态分布。中心极限定理：给定一个任意分布的总体。每次从这些总体中随机抽取 n 个抽样，一共抽 m 次。 然后把这 m 组抽样分别求出平均值。 这些平均值的分布接近正态分布。中心极限定理使得正态分布成为最常用的分布。如果对一个分布没有任何信息，可以先假设为正态分布。
+
 $$
 f(x|\mu, \sigma^2) = \frac{1}{\sqrt{2\pi \sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
 $$
