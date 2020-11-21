@@ -11,7 +11,7 @@ author: Sam
 
 ### 1. Naïve representation (One-hot): 
 
-用one-hot向量来表示，这个向量的维度是 $R^{|V|}$。也就是词袋模型。
+用one-hot向量来表示，这个向量的维度是 $R^{\mid V \mid}$。也就是词袋模型。
 
 缺点：
 
