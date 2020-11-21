@@ -63,7 +63,7 @@ TF-IDF用来衡量一个词的重要性，用来做词的特征选择，也常�
 
 Embedding Learning说白了就是要学习词的向量表达：embedding matrix。
 
-其实上面提到的count-based的方法也产生了一个 维度为 $R^{|V|\times|D|}$ 的embedding matrix。这种embedding matrix也称为**Distributional Representation**，是2种主流 word representation 方法的一种。另外一种是**Distributed Representation**，也就是这一小节的重点。
+其实上面提到的count-based的方法也产生了一个 维度为 $R^{\mid V \mid \times \mid D \mid}$ 的embedding matrix。这种embedding matrix也称为**Distributional Representation**，是2种主流 word representation 方法的一种。另外一种是**Distributed Representation**，也就是这一小节的重点。
 
 2种representation的特点：
 
@@ -76,7 +76,7 @@ Embedding Learning说白了就是要学习词的向量表达：embedding matrix�
 
 #### 4.1. Embedding + One-hot
 
-假设一个词库的embedding matrix为 $E$，维度为$R^{|V|\times|D|}$。再假设词库的one-hot向量为 $O$，维度为 $R^{|V| \times 1}$。
+假设一个词库的embedding matrix为 $E$，维度为$R^{\mid V \mid \times \mid D \mid}$。再假设词库的one-hot向量为 $O$，维度为 $R^{\mid V \mid \times 1}$。
 
 那么一个词的向量可以由 $O^T \times E$ 获得。
 
@@ -144,7 +144,7 @@ Embedding Learning说白了就是要学习词的向量表达：embedding matrix�
 
    
 
-7. 仔细观察这个模型就会发现，它其实在同时解决两个问题：**一个是统计语言模型里关注的条件概率 $p(w_t|context)$ 的计算；一个是向量空间模型里关注的词向量的表达**。而这两个问题本质上并不独立。通过引入连续的词向量和平滑的概率模型，我们就可以在一个连续空间里对序列概率进行建模，从而从根本上**缓解数据稀疏性和维度灾难的问题**。
+7. 仔细观察这个模型就会发现，它其实在同时解决两个问题：**一个是统计语言模型里关注的条件概率 $p(w_ t \mid context)$ 的计算；一个是向量空间模型里关注的词向量的表达**。而这两个问题本质上并不独立。通过引入连续的词向量和平滑的概率模型，我们就可以在一个连续空间里对序列概率进行建模，从而从根本上**缓解数据稀疏性和维度灾难的问题**。
 
 
 
