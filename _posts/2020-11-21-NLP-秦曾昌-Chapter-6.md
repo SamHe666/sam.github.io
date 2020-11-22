@@ -7,4 +7,86 @@ toc: true
 author: Sam
 ---
 
-## POS Tagging （词性标注）
+## POS (Part of Speech ) Tagging 词性标注
+
+### 1. Why Need
+
+为什么需要词性标注：对句法解析非常重要！
+
+现在其实已经有了很多好用的词性标注工具，比如：
+
+- **Jieba**：“结巴”中文分词：做最好的 Python 中文分词组件，可以进行词性标注。
+  Github地址：[https://github.com/fxsjy/jieba]
+- **SnowNLP**：SnowNLP是一个python写的类库，可以方便的处理中文文本内容。
+  Github地址：[https://github.com/isnowfy/snownlp]
+- **THULAC**：THULAC（THU Lexical Analyzer for Chinese）由清华大学自然语言处理与社会人文计算实验室研制推出的一套中文词法分析工具包，具有中文分词和词性标注功能。
+  Github地址：[https://github.com/thunlp/THULAC]
+  官网：[http://thulac.thunlp.org/]
+- **Hanlp**：HanLP是一系列模型与算法组成的NLP工具包，由大快搜索主导并完全开源，目标是普及自然语言处理在生产环境中的应用。
+  Github地址：[https://github.com/hankcs/pyhanlp]
+  官网：[http://hanlp.linrunsoft.com/]
+
+
+
+### 2. Challenges
+
+词性标注的困难的地方在于词的ambiguous歧义：
+
+1. 同一个词可以有不同的词性
+2. 同一个词在同一个词性下可以有不同的语义含义
+
+
+
+### 3. Approches
+
+#### 3.1. Rule-based Approach
+
+这种方法不需要训练语料库，其基本思想是按兼类词搭配关系和上下文语境建造词类消歧规则，比如动词后面加名词。这种方法最大的问题是，语法规则不是普适性的，会在不同情况下被打破。现在已经不怎么用了。
+
+
+
+#### 3.2. Stochastic Approach
+
+##### 3.2.1. N元语法词性标注
+
+和N元语法模型差不多，只不过把词的统计改为词性的统计而已。也就是说，这个模型认为当前词和它前面 N-1 个标识符的词性有关。
+
+
+
+**额外备注**：注意word token和word type的区别。Word token指的是出现的每一个词或者符号等等，不管是否重复都要算。而word type指的是语料库中不同单词的数目（派生形式也算不同的word type），词典容量 $\mid V \mid$。
+
+
+
+##### 3.2.2. HMM词性标注
+
+建模：句子为观测序列，词性为隐含状态序列。
+
+
+
+可以当成HMM3大经典问题（evaluation，recognition，training）之一来处理，然后用维特比算法来求解。关于HMM的解析请参考Tech下的HMM专刊。
+
+
+
+从training corpus里面学：
+
+1. Transition probability，状态转移矩阵，每种词性之间相互转换的概率。
+2. Emission probability，释放矩阵，一种词性下多大概率出现某个词。
+3. Initial probability，初始概率，一句话的第一个词是什么词性的概率。
+
+
+
+给定观测序列，加上从训练语料库里学习到的3大HMM的模型参数，我们可以用维特比算法轻松求出隐含状态序列。
+
+
+
+#### 3.3. Transformation-Based Learning Approach (Brill标注器)
+
+Combines rules with learning patterns from a tagged corpus. 
+
+
+
+#### 3.4. Deep Learning Based Approach
+
+如果语料库足够大的话，我们可以用sequence-to-sequence + attention来做。
+
+可以当作序列标注的任务来做，目前深度学习解决序列标注任务常用方法包括LSTM+CRF、BiLSTM+CRF等。
