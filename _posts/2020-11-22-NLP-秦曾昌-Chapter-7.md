@@ -220,6 +220,18 @@ Dirichlet-Multinomial 就是一个共轭结构。在LDA中，M 篇文档会对�
 
 
 
+### 3. 关于中文的处理
+
+英文最小的语义单元是词，做主题模型的时候毫无疑问是基于单词来做。而中文的最小的语义单元其实是字，当然现代中文好多语义也是以词为单位了（语言在进化）。那么这里面就会存在一个问题，做主题模型的时候，是基于中文分词来做呢还是可以直接基于字来做？
+
+秦曾昌老师做了几个实验对比了character-based LDA 和 word-based LDA：
+
+1. 文档生成：用训练好的LDA去生成一个文档。character-based LDA 的困惑度明显比word-based LDA低。其实这个很容易理解，因为文字的话其实就2-3千个，而这些文字组成的词就起码上万了。
+2. 文档分类：性能非常接近，但是character-based LDA 明显计算量更少。
+3. 双语文档分类：双语训练集指的是，对于每一个中文文档，我们都要等价的翻译英文文档对应。在做文档分类的时候能发现，基于英文单词，中文单词，和中文字的分类结果其实很接近。
+
+
+
 ### Reference
 
 1. https://www.jiqizhixin.com/articles/topic-modeling-with-lsa-psla-lda-and-lda2vec
