@@ -227,7 +227,7 @@ Dirichlet-Multinomial 就是一个共轭结构。在LDA中，M 篇文档会对�
 秦曾昌老师做了几个实验对比了character-based LDA 和 word-based LDA：
 
 1. 文档生成：用训练好的LDA去生成一个文档。character-based LDA 的困惑度明显比word-based LDA低。其实这个很容易理解，因为文字的话其实就2-3千个，而这些文字组成的词就起码上万了。
-2. 文档分类：性能非常接近，但是character-based LDA 明显计算量更少。
+2. 文档分类：性能非常接近，但是character-based LDA 明显计算量更少。如果查看某个主题的词分布，character-based LDA的可解读性稍比word-based LDA弱，因为现代中文好多语义也是以词为单位了。
 3. 双语文档分类：双语训练集指的是，对于每一个中文文档，我们都要等价的翻译英文文档对应。在做文档分类的时候能发现，基于英文单词，中文单词，和中文字的分类结果其实很接近。
 
 
